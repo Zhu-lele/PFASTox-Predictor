@@ -5,7 +5,7 @@ import pandas as pd
 st.set_page_config(page_title="PFASTox Database", layout="wide")
 
 # 🔗 更新数据文件地址，注意这里使用 raw 链接
-file_url = "https://github.com/Zhu-lele/PFASTox-Predictor/blob/main/PFAS_toxicity_data.csv"
+file_url = "https://github.com/Zhu-lele/PFASTox-Predictor/blob/main/PFAS_toxicity_data.xlsx"
 
 # 🎨 页面样式（整体背景设置为天蓝色，部分文字和控件为深蓝色）
 page_style = """

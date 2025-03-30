@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # 🌊 设置 Streamlit 页面主题
-st.set_page_config(page_title="PFAS Toxicity Database", layout="wide")
+st.set_page_config(page_title="PFASTox Database", layout="wide")
 
 # 🔗 更新数据文件地址，注意这里使用 raw 链接
 file_url = "https://raw.githubusercontent.com/Zhu-lele/PFASTox-Predictor/main/PFAS_toxicity_data.csv"

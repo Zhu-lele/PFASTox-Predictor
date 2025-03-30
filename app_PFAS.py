@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # 设置 Streamlit 页面主题
-st.set_page_config(page_title="PFAS Toxicity Database", layout="wide")
+st.set_page_config(page_title="PFASTox Database", layout="wide")
 
 # 数据文件地址（raw GitHub 链接）
 file_url = "https://raw.githubusercontent.com/Zhu-lele/PFASTox-Predictor/main/PFAS_toxicity_data.xlsx"
@@ -42,12 +42,12 @@ page = st.sidebar.radio("", ["主页", "数据预览", "数据筛选"])
 # 主页
 if page == "主页":
     st.markdown('<div class="title-large">🌊 欢迎来到 PFAS Toxicity Database 🌍</div>', unsafe_allow_html=True)
-    st.markdown('<div class="description-box">本数据库提供 PFAS 化学品的毒性数据，涵盖多种物种及暴露时长。您可以通过 Chemicals、CAS、SMILES 或 Species 进行筛选。</div>', unsafe_allow_html=True)
+    st.markdown('<div class="description-box">PFASTox Database中包含了约5000种PFAS对4种鱼类的生态毒性数据</div>', unsafe_allow_html=True)
     st.image("https://raw.githubusercontent.com/Zhu-lele/PFASTox-Predictor/main/model_diagram.png", use_container_width=True)
     st.markdown("""
         <div class="contact-box">
-            本数据库由 Key Laboratory of Industrial Ecology and Environmental Engineering 开发<br>
-            如有疑问，请联系: 📧 <b>Zhu_lll@163.com</b>
+            本数据库由大连理工大学 李雪花教授课题组 开发<br>
+            如有任何问题，欢迎联系我们 📧 <b>Zhu_lll@163.com</b>
         </div>
     """, unsafe_allow_html=True)
 

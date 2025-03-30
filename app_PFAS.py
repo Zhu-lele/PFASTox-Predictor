@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 
 # 🌊 设置 Streamlit 页面主题
-st.set_page_config(page_title="PFASTox Database", layout="wide")
+st.set_page_config(page_title="PFAS Toxicity Database", layout="wide")
 
-# 🔗 更新数据文件地址，注意这里使用 raw 链接
-file_url = "https://github.com/Zhu-lele/PFASTox-Predictor/blob/main/PFAS_toxicity_data.xlsx"
+# 🔗 更新数据文件地址，使用 GitHub raw 链接
+file_url = "https://raw.githubusercontent.com/Zhu-lele/PFASTox-Predictor/main/PFAS_toxicity_data.xlsx"
 
 # 🎨 页面样式（整体背景设置为天蓝色，部分文字和控件为深蓝色）
 page_style = """
@@ -107,7 +107,7 @@ if page == "主页":
 elif page == "数据预览":
     st.markdown('<div class="title-large">🔬 毒性数据预览</div>', unsafe_allow_html=True)
     try:
-        df = pd.read_csv(file_url)
+        df = pd.read_excel(file_url)
         st.write("### 📊 全部数据")
         st.dataframe(df, height=600)
     except Exception as e:
@@ -117,7 +117,7 @@ elif page == "数据预览":
 elif page == "数据筛选":
     st.markdown('<div class="title-large">🔍 数据筛选</div>', unsafe_allow_html=True)
     try:
-        df = pd.read_csv(file_url)
+        df = pd.read_excel(file_url)
         st.sidebar.markdown('<div class="sidebar-title">🔍 输入筛选条件</div>', unsafe_allow_html=True)
         
         # 筛选选项：Chemicals, CAS, SMILES, Species
